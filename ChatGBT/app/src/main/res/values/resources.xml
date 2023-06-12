@@ -1,0 +1,5 @@
+<resources>
+    <style name="Theme.RemoveSplashScreenTheme" parent="@style/Theme.ChatGBT">
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+</resources>

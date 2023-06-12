@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="com.yasarkiremitci.chatgbt.Fragments.SplashScreen"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreen_to_onboardings1"
+            app:destination="@id/onboardings1" />
+    </fragment>
+    <fragment
+        android:id="@+id/onboardings1"
+        android:name="com.yasarkiremitci.chatgbt.Fragments.Onboardings1"
+        android:label="fragment_onboardings1"
+        tools:layout="@layout/fragment_onboardings1" >
+        <action
+            android:id="@+id/action_onboardings1_to_onboardings2"
+            app:destination="@id/onboardings2" />
+    </fragment>
+    <fragment
+        android:id="@+id/onboardings2"
+        android:name="com.yasarkiremitci.chatgbt.Fragments.Onboardings2"
+        android:label="fragment_onboardings2"
+        tools:layout="@layout/fragment_onboardings2" >
+        <action
+            android:id="@+id/action_onboardings2_to_inApp"
+            app:destination="@id/inApp" />
+    </fragment>
+    <fragment
+        android:id="@+id/inApp"
+        android:name="com.yasarkiremitci.chatgbt.Fragments.InApp"
+        android:label="fragment_in_app"
+        tools:layout="@layout/fragment_in_app" >
+        <action
+            android:id="@+id/action_inApp_to_homeChat"
+            app:destination="@id/homeChat" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeChat"
+        android:name="com.yasarkiremitci.chatgbt.Fragments.HomeChat"
+        android:label="fragment_home_chat"
+        tools:layout="@layout/fragment_home_chat" >
+        <action
+            android:id="@+id/action_homeChat_to_settings"
+            app:destination="@id/settings" />
+        <action
+            android:id="@+id/action_homeChat_to_inApp"
+            app:destination="@id/inApp" />
+    </fragment>
+    <fragment
+        android:id="@+id/settings"
+        android:name="com.yasarkiremitci.chatgbt.Fragments.Settings"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settings_to_inApp"
+            app:destination="@id/inApp" />
+        <action
+            android:id="@+id/action_settings_to_homeChat"
+            app:destination="@id/homeChat" />
+    </fragment>
+</navigation>
